@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pr-risk-scorer"
+version = "0.1.0"
+description = "Heuristic risk scoring for a git diff/PR patch: secrets, vendored-dir commits, oversized diffs, and missing tests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Arnav Chawla" }]
+
+[project.scripts]
+pr-risk = "pr_risk.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pr_risk*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
