@@ -1,0 +1,3 @@
+# No third-party runtime dependencies — pr_risk is stdlib-only.
+# Dev/test only:
+pytest>=7.0
